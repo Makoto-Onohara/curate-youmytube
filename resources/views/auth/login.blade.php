@@ -15,14 +15,14 @@
     
     <div class="row mt-5 mb-5">
         <div class="col-sm-6 offset-sm-3">
-        
+
             {!! Form::open(['route' => 'login.post']) !!}
                 <div class="form-group">
-                    {!! Form::label('email', 'メールアドレス') !!}
+                    {!! Form::label('email', 'メールアドレス(テスト用「test@test.com」)') !!}
                     {!! Form::email('email', old('email'), ['class' => 'form-control']) !!}
                 </div>
                 <div class="form-group">
-                    {!! Form::label('password', 'パスワード') !!}
+                    {!! Form::label('password', 'パスワード(テスト用「testtest」)') !!}
                     {!! Form::password('password', ['class' => 'form-control']) !!}
                 </div>
                 {!! Form::submit('ログイン', ['class' => 'btn btn-primary mt-2']) !!}
