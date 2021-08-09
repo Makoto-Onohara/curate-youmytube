@@ -26,12 +26,14 @@ class MoviesController extends Controller
     public function store(Request $request)
     {
         $this->validate($request, [
-            'url'       => 'required|max:11',
+            // 'url'       => 'required|max:11',
+            'url'       => 'required',
             'comment'   => 'max:36',
         ]);
         
         $request->user()->movies()->create([
-            'url'       => $request->url,
+            // 'url'       => $request->url,
+            'url'       => Movie::urlToVideoParam($request->url),
             'comment'   => $request->comment,
         ]);
         

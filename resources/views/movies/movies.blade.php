@@ -23,10 +23,9 @@
     
     
         @if($loop->iteration % 3 == 1 && $loop->iteration != 1)
-        
-            @php
-                echo '</div><div class="row text-center mt-3"></div>';
-            @endphp
+            </div>
+            
+            <div class="row text-center mt-3">
         @endif
             
             <div class="col-lg-4 mb-5">

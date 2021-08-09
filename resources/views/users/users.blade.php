@@ -28,7 +28,7 @@
         @endphp
         
         {{-- // １列に３つ表示 --}}
-        @if ($loop->iteration % 3 == 1 && $loop->iteration !=1)
+        @if ($loop->iteration % 3 == 1 && $loop->iteration != 1)
         
             </div>
         

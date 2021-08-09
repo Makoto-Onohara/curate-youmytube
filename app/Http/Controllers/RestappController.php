@@ -54,12 +54,15 @@ class RestappController extends Controller
     public function store(Request $request)
     {
         $this->validate($request, [
-            'url'       => 'required|max:11',
+            //'url'       => 'required|max:11',
+            'url'       => 'required',
             'comment'   => 'max:36',
         ]);
         
         User::find(1)->movies()->create([
-            'url'       => $request->url,
+            // 'url'       => $request->url,
+            // 'url'       => $url,
+            'url'       => Movie::urlToVideoParam($request->url),
             'comment'   => $request->comment,
         ]);
         

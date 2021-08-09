@@ -10,16 +10,8 @@
     
     {!! Form::open(['route'=>'movies.store']) !!}
         <div class="form-group mt-5">
-            {!! Form::label('url','新規登録YouTube動画 "ID" を入力する',['class'=>'text-success']) !!}
-                <br>
-                例) 登録したいYouTube動画のURLが
-                    <span>
-                        https://www.youtube.com/watch?v=-bNMq1Nxn5o なら
-                    </span>                
-                <div>
-                    "v="の直後にある"<span class="text-success">-bNMq1Nxn5o</span>"を入力
-                 </div>
-                 
+            {!! Form::label('url','新規登録YouTube動画 "URL" を入力する',['class'=>'text-success']) !!}
+
             {!! Form::text('url',null,
                     [
                         'class'=>'form-control',
