@@ -36,8 +36,9 @@ Route::resource('users', 'UsersController', ['only' => ['show']]);
 Route::group(['prefix' => 'users/{id}'], function(){
    Route::get('followings', 'UsersController@followings')->name('followings');
    Route::get('followers', 'UsersController@followers')->name('followers');
-   
 });
+
+Route::resource('rest', 'RestappController', ['only' => ['index', 'show', 'create', 'store', 'destroy']]);
 
 // 動画登録・チャンネル名・ユーザ名の変更
 Route::group(['middleware' => 'auth'], function(){

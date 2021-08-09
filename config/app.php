@@ -227,5 +227,8 @@ return [
         'View' => Illuminate\Support\Facades\View::class,
 
     ],
+    
+    // YouTube APIキーを設定ファイルから読み込む
+    'key_name' => env('API_KEY'),
 
 ];
