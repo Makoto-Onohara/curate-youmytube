@@ -49,6 +49,12 @@
                         @if (isset($movie->comment))
                             {{ $movie->comment }}
                         @else
+                        {{-- コメントは36文字制限でコントローラーでバリデーションをかけられているが、 --}}
+                        {{-- ビューではバリデーションがかからず表示されるので加工する --}}
+                            @php
+                                $video_title = mb_substr($video_title, 0, 36, "UTF-8");
+                            @endphp
+                            
                             {{ $video_title }}
                         @endif
                     </p>
